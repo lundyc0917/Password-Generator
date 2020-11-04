@@ -1,15 +1,15 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-//Special Char for the function
+// Arrays for special characters, numbers, and letters
 var specialCharString = " !#$%&'()*+,-./:;<=>?@[]^_`{|}~";
 var specialArray = specialCharString.split("");
-console.log(specialArray);
+// console.log(specialArray);
 var alphabetString = "abcdefghijklmnopqrstuvwxyz"
 var lowerArray = alphabetString.split("");
 var upperArray = alphabetString.toUpperCase().split("");
-var
-var numArray = ["0", "1", "2", "3", "4", "5"]
+var numString = "0123456789"
+var numArray = numString.split("");
 
 // Write password to the #password input
 function writePassword() {
@@ -19,12 +19,13 @@ function writePassword() {
   passwordText.value = password;
 }
 
+// Beginning of function generatePassword
 function generatePassword() {
   var options = getOptions();
   var superArray = [];
   var results = [];
 
-  console.log(options)
+  // console.log(options)
 
   if(options.lowerCase) {
     superArray = superArray.concat(lowerArray)
@@ -39,7 +40,7 @@ function generatePassword() {
     superArray = superArray.concat(specialArray)
   } 
 
-  console.log(superArray)
+  // console.log(superArray)
 
   for(var i = 0; i < options.passwordLength; i++) {
     var index = Math.floor(Math.random() * superArray.length)
@@ -52,8 +53,10 @@ function generatePassword() {
   return results.join("")
 
 }
+// End of function generatePassword
 
-// Beginning of function generatePassword
+
+// Beginning of function getOptions to get the user input
 function getOptions() {
   // Length - Enter a number between 8 - 128 Characters
   var passwordLength = parseInt(
@@ -63,7 +66,7 @@ function getOptions() {
   );
   console.log(passwordLength);
   if (isNaN(passwordLength) === true) {
-    alert("Must be more than 8 characters.");
+    alert("Must be a numeric value more than 8 and less than 128.");
     return;
   }
   if (passwordLength < 8) {
@@ -106,7 +109,10 @@ function getOptions() {
 
   return userInput;
 }
-// End of function generatePassword
+// End of function getOptions
+
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+
