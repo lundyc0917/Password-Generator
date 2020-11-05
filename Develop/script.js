@@ -4,7 +4,7 @@ var generateBtn = document.querySelector("#generate");
 // Arrays for special characters, numbers, and letters
 var specialCharString = " !#$%&'()*+,-./:;<=>?@[]^_`{|}~";
 var specialArray = specialCharString.split("");
-// console.log(specialArray);
+console.log(specialArray);
 var alphabetString = "abcdefghijklmnopqrstuvwxyz"
 var lowerArray = alphabetString.split("");
 var upperArray = alphabetString.toUpperCase().split("");
@@ -25,7 +25,7 @@ function generatePassword() {
   var superArray = [];
   var results = [];
 
-  // console.log(options)
+  console.log(options)
 
   if(options.lowerCase) {
     superArray = superArray.concat(lowerArray)
@@ -40,7 +40,7 @@ function generatePassword() {
     superArray = superArray.concat(specialArray)
   } 
 
-  // console.log(superArray)
+  console.log(superArray)
 
   for(var i = 0; i < options.passwordLength; i++) {
     var index = Math.floor(Math.random() * superArray.length)
@@ -58,7 +58,7 @@ function generatePassword() {
 
 // Beginning of function getOptions to get the user input
 function getOptions() {
-  // Length - Enter a number between 8 - 128 Characters
+  // Length prompt for user to enter a number between 8 - 128 Characters
   var passwordLength = parseInt(
     prompt(
       "Enter the number of characters you would like. It must be more than 8 and less than 128."
@@ -78,7 +78,7 @@ function getOptions() {
     return;
   }
 
-  // Char Types - select: lowercase, uppercase, numeric, and/or special chars
+  // Char Types for user to select: lowercase, uppercase, numeric, and/or special chars
   var lowerCase = confirm("Do you want lowercase characters in your password?");
 
   var upperCase = confirm("Do you want uppercase characters in your password?");
