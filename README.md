@@ -1,6 +1,9 @@
 # Password-Generator
 Generate new, secure password based on certain criteria selected by the user
 
+## Link to Deployed Site
+https://lundyc0917.github.io/Password-Generator/
+
 ## Motivation
 Create a password generator to generate strong, secure passwords based on the users criteria.  This allows for the user to generate a random, strong password to be used.
 
