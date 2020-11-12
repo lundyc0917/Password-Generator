@@ -12,12 +12,12 @@ Create a password generator to generate strong, secure passwords based on the us
 build | passing
 
 ## Screen Shots
+![password-generator-homePage](https://user-images.githubusercontent.com/71233342/99009121-7b69bc00-2515-11eb-821d-b5210b7b3c6c.png)
 
-![Web Site Screenshot - Home Page](./assets/password-generator-homePage.png)
+![password-generator-prompt](https://user-images.githubusercontent.com/71233342/99009055-56754900-2515-11eb-8111-b9f7a8852089.png)
 
-![Web Site Screenshot - Prompt](./asset/password-generator-prompt.png)
+![password-generator-newPassword](https://user-images.githubusercontent.com/71233342/99008906-13b37100-2515-11eb-9535-f3b2b97f08d6.png)
 
-![Web Site Screenshot - Password](./assets/password-generator-newPassword.png)
 
 ## Framework Used
 
